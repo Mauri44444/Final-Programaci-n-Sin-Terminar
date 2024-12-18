@@ -43,19 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Carrera.cs" />
+    <Compile Include="Clases\SingletonCarrera.cs" />
+    <Compile Include="Clases\SingletonUsuario.cs" />
+    <Compile Include="Clases\Singleton.cs" />
     <Compile Include="Clases\Usuario.cs" />
-    <Compile Include="Datos\DatosUsuario.cs" />
     <Compile Include="Interfaces\IABMC.cs" />
-    <Compile Include="Interfaces\IAccesoADatos.cs" />
+    <Compile Include="Interfaces\IGenericSingleton.cs" />
+    <Compile Include="Interfaces\ISingletonCarrera.cs" />
+    <Compile Include="Interfaces\ICarrera.cs" />
+    <Compile Include="Interfaces\ISingletonUsuario.cs" />
     <Compile Include="Interfaces\IID.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Datos\usuarioLastId.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Datos\usuarios.json" />
+    <ProjectReference Include="..\CapaDeDatos\CapaDeDatos.csproj">
+      <Project>{dbd7e29f-e54a-4e68-8884-804666dc0bc9}</Project>
+      <Name>CapaDeDatos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
